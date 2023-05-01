@@ -1,1 +1,85 @@
+@use '../mixins/responsive.scss' as *;
 
+.header{
+    background-color: var(--background-color);
+    background-image: url(../assets/images/bg-hero-mobile.svg);
+    background-size: cover;
+
+    @include responsive(desktop){
+        background-image: url(src/assets/images/bg-hero-desktop.svg);
+    }
+
+    &__top{
+        padding: 24px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 80px;
+
+        @include responsive(desktop){
+            padding: 48px 80px;
+            margin-bottom: 70px;
+        }
+    }
+
+    &__logo{
+        width: 104px;
+
+        @include responsive(desktop){
+            width: 200px;
+        }
+    }
+
+    &__section{
+        padding: 0 35px 35px 35px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 3.5rem;
+
+        @include responsive(desktop){
+            padding: 0 85px 72px 85px;
+            flex-direction: row;
+            gap: 3.375rem;
+            text-align: left;
+            align-items: center;
+        }
+    }
+
+    &__title{
+        font-family: var(--font-family-poppins);
+        font-weight: var(--font-weight-semibold);
+        font-size: 24px;
+        line-height: 36px;
+        color: var(--color-text);
+        margin: 0;
+        margin-bottom: 24px;
+
+        @include responsive(desktop){
+            font-size: 40px;
+            line-height: 60px;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__text{
+        font-family: var(--font-family-open-sans);
+        font-weight: var(--font-weight-regular);
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--color-text);
+        margin-bottom: 32px;
+
+        @include responsive(desktop){
+            font-size: 18px;
+            line-height: 27px;
+            margin-bottom: 48px;
+        }
+    }
+}
+
+.header__illustration{
+    @include responsive(desktop){
+        width: 680px;
+    }
+}

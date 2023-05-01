@@ -1,1 +1,40 @@
+@use '../mixins/responsive.scss' as *;
 
+.header__top--button{
+    padding: 5px 22px;
+    background-color: var(--white);
+    border-radius: 50px;
+    font-family: var(--font-family-open-sans);
+    font-weight: var(--font-weight-bold);
+    font-size: 10px;
+    box-shadow: 0.5px 0.5px 6px black;
+
+    @include responsive(desktop){
+        padding: 13px 65px;
+        font-size: 14px;
+
+        &:hover{
+            color: var(--color-text-secundary);
+        }
+    }
+}
+
+.header__button{
+    padding: 12px 60px;
+    font-family: var(--font-family-open-sans);
+    font-weight: var(--font-weight-bold);
+    font-size: 12px;
+    color: var(--white);
+    background-color: var(--color-button);
+    padding: 12px 60px;
+    border-radius: 50px;
+
+    @include responsive(desktop){
+        padding: 18px 70px;
+        font-size: 14px;
+
+        &:hover{
+            background-color: var(--color-button-hover);
+        }
+    }
+}
